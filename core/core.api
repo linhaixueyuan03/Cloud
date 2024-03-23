@@ -7,7 +7,7 @@ service core-api {
 
 	// 用户详情
 	@handler UserDetail
-	post /user/detail (LoginDetailRequest) returns (LoginDetailReply)
+	get /user/detail (LoginDetailRequest) returns (LoginDetailReply)
 }
 
 type LoginRequest {
@@ -20,7 +20,7 @@ type LoginReply {
 }
 
 type LoginDetailRequest {
-	Identity string `json:"identity"`
+	Idetity string `json:"idetity"`
 }
 
 type LoginDetailReply {

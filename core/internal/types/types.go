@@ -7,7 +7,7 @@ type LoginDetailReply struct {
 }
 
 type LoginDetailRequest struct {
-	Identity string `json:"identity"`
+	Idetity string `json:"idetity"`
 }
 
 type LoginReply struct {
