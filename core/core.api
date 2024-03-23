@@ -1,8 +1,13 @@
 syntax = "v1"
 
 service core-api {
-	@handler User
+	// 登录接口
+	@handler UserLogin
 	post /user/login (LoginRequest) returns (LoginReply)
+
+	// 用户详情
+	@handler UserDetail
+	post /user/detail (LoginDetailRequest) returns (LoginDetailReply)
 }
 
 type LoginRequest {
@@ -12,5 +17,14 @@ type LoginRequest {
 
 type LoginReply {
 	Token string `json:"token"`
+}
+
+type LoginDetailRequest {
+	Identity string `json:"identity"`
+}
+
+type LoginDetailReply {
+	Name  string `json:"name"`
+	Email string `json:"email"`
 }
 
