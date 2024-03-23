@@ -6,7 +6,7 @@ type UserClaim struct {
 	Id       int
 	Identity string
 	Name     string
-	jwt.StandardClaims
+	jwt.RegisteredClaims
 }
 
 var JwtKer = "cloud-disk-key"
